@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Songsterr Popup Remover",
+  "version": "1.0",
+  "description": "Elimina popups y efectos de blur en Songsterr.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.songsterr.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.songsterr.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
